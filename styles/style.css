@@ -1,50 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-:root {
-  --blue: rgb(47, 65, 79);
-  --teal1: rgb(0, 173, 173);
-  --teal2: rgb(0, 206, 206);
-  --teal3: rgb(69, 240, 240);
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+::-moz-selection {
+  background: #00adad;
 }
 ::selection {
-  background: var(--teal1);
+  background: #00adad;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
 
 html,
 body {
-  background-color: var(--blue);
+  background-color: #2f414f;
   color: white;
   margin: 0;
   width: 100%;
   min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-h1,
-h3,
-p,
-div,
-output {
-  cursor: default;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h1 {
   margin: 20px 0 0;
   font-size: 50px;
 }
+
 h3 {
   margin: 0 0 40px;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 p {
@@ -66,25 +66,32 @@ output {
   height: 10px;
   border-radius: 10px;
   cursor: pointer;
-  background: var(--teal1);
+  background: #00adad;
   outline: none;
   opacity: 0.8;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
+
 #slider:hover {
   opacity: 1;
 }
+
 #slider:active {
-  background: var(--teal2);
+  background: #00cece;
 }
+
 #slider::-webkit-slider-thumb {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--teal3);
+  background: #45f0f0;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
+
 #slider::-webkit-slider-thumb:hover {
   width: 25px;
   height: 25px;
@@ -95,67 +102,87 @@ label {
   padding: 10px;
   cursor: pointer;
   opacity: 0.9;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
+
+label:hover {
+  opacity: 1;
+}
+
+label:active {
+  -webkit-transform: scale(0.94);
+          transform: scale(0.94);
+}
+
 #extra {
   margin: 10px;
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: var(--teal3);
-}
-label:hover {
-  opacity: 1;
-}
-label:active {
-  transform: scale(0.94);
+  accent-color: #45f0f0;
 }
 
 button {
-  background-color: var(--teal1);
+  color: white;
+  background-color: #00adad;
   margin: 20px 0 30px;
   padding: 20px 30px;
   border-radius: 40px;
   border: none;
-  color: white;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.1s, padding 0.2s;
   transition: all 0.1s, padding 0.2s;
 }
+
 button:hover {
-  background-color: var(--teal2);
+  background-color: #00cece;
   padding: 20px 40px;
 }
+
 button:active {
-  background-color: var(--teal3);
-  transform: scale(0.95);
+  background-color: #45f0f0;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 #password {
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 10px 0 0;
   padding: 6px 14px;
   border-radius: 20px;
   cursor: pointer;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
+
 #password:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
 #password:active {
   text-shadow: none;
-  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
   color: rgba(255, 255, 255, 0.8);
 }
 
 #copied {
   margin: 20px 0 40px;
   font-size: 16px;
-  color: var(--teal3);
+  color: #45f0f0;
 }
 
 @media (max-width: 700px) {
@@ -178,3 +205,4 @@ button:active {
     border-radius: 14px;
   }
 }
+/*# sourceMappingURL=style.css.map */

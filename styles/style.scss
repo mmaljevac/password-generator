@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import './variables';
+
+::selection {
+  background: $teal1;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+}
+
+html,
+body {
+  background-color: $blue;
+  color: white;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: $mainFont;
+}
+
+h1 {
+  margin: 20px 0 0;
+  font-size: 50px;
+}
+h3 {
+  margin: 0 0 40px;
+  transform: translateX(100%);
+}
+
+p {
+  font-size: 30px;
+  margin: 10px 0 20px;
+}
+
+output {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#slider {
+  -webkit-appearance: none;
+  margin: 20px 0 30px;
+  max-width: 400px;
+  width: 70vw;
+  height: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: $teal1;
+  outline: none;
+  opacity: 0.8;
+  transition: all 0.1s;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    background: $teal2;
+  }
+}
+#slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $teal3;
+  transition: all 0.1s;
+
+  &:hover {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+label {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+  user-select: none;
+  transition: all 0.1s;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: scale(0.94);
+  }
+}
+#extra {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: $teal3;
+}
+
+button {
+  @include buttonStyle(white, $teal1, $teal2, $teal3);
+}
+
+#password {
+  font-size: 30px;
+  font-family: $passwordFont;
+  margin: 10px 0 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  &:active {
+    text-shadow: none;
+    transform: scale(0.98);
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+#copied {
+  margin: 20px 0 40px;
+  font-size: 16px;
+  color: $teal3;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 7vw;
+  }
+  h3 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 20px;
+  }
+  input {
+    max-width: none;
+    width: 90vw;
+  }
+  #password {
+    font-size: 6vw;
+    border-radius: 14px;
+  }
+}
